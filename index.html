@@ -13,8 +13,8 @@
    <!------------- Search section start -------------->
 
     <div class="text-center">
-        <input class="placeholder:italic placeholder:text-slate-400  bg-white  border p-1 sborder-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
-        <button class="bg-teal-600 p-2 text-white rounded-md">Search </button>
+        <input id="search-field" class="placeholder:italic placeholder:text-slate-400  bg-white  border p-1 sborder-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
+        <button onclick="dataLoad()" class="bg-teal-600 p-2 text-white rounded-md">Search </button>
     </div>
    <!------------- Search section end -------------->
 
@@ -22,37 +22,13 @@
    <!------------ book card design start ---------------->
    
    <section class="container mx-auto m-10">
-    <div class="grid grid-cols-3 gap-4 ">
+    <div id="display-book" class="grid grid-cols-3 gap-4 ">
 
-        <div>
-            <img src="" alt="sorry to load">
-            <h1>Book Name</h1>
-            <h1>Book author name</h1>
-            <div class="flex">
-                <h1>Price</h1>
-                <button class="bg-teal-600 p-1 text-white rounded-md">Buy Name </button>
-            </div>
-        </div>
+      
         
-        <div>
-            <img src="" alt="sorry to load">
-            <h1>Book Name</h1>
-            <h1>Book author name</h1>
-            <div class="flex">
-                <h1>Price</h1>
-                <button class="bg-teal-600 p-1 text-white rounded-md">Buy Name </button>
-            </div>
-        </div>
+        
 
-        <div>
-            <img src="" alt="sorry to load">
-            <h1>Book Name</h1>
-            <h1>Book author name</h1>
-            <div class="flex">
-                <h1>Price</h1>
-                <button class="bg-teal-600 p-1 text-white rounded-md">Buy Name </button>
-            </div>
-        </div>
+     
         
       </div>
    </section>
