@@ -20,11 +20,13 @@ const displayBook=data=>{
     data.forEach(info=>{
 
         console.log(info)
+
+        if(info.cover_i){
         const div=document.createElement('div')
         div.innerHTML=`
         <div>
-        <img src="" alt="sorry to load">
-        <h1>Title Name:${info.title}</h1>
+        <img src=" https://covers.openlibrary.org/b/id/${info.cover_i ? info.cover_i:'' }-M.jpg " alt="Not available">
+        <h1 class=" ">Title Name:${info.title}</h1>
         <h1>Author Name:${info.author_name}</h1>
         <h1>Publisher:${info.publisher}</h1>
         <h1>Publish date:${info.publish_date}</h1>
@@ -38,5 +40,12 @@ const displayBook=data=>{
     </div>
         `
         displaybook.appendChild(div)
+        }
+
+        else{
+            console.log("Sorry")
+        }
+      
+        
     })
 }
