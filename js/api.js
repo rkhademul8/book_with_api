@@ -24,27 +24,27 @@ const displayBook=data=>{
         if(info.cover_i){
         const div=document.createElement('div')
         div.innerHTML=`
-        <div>
-        <img src=" https://covers.openlibrary.org/b/id/${info.cover_i ? info.cover_i:'' }-M.jpg " alt="Not available">
-        <h1 class=" ">Title Name:${info.title}</h1>
-        <h1>Author Name:${info.author_name}</h1>
-        <h1>Publisher:${info.publisher}</h1>
-        <h1>Publish date:${info.publish_date}</h1>
-        
-
-
-        <div class="flex">
-            <h1>Price</h1>
-            <button class="bg-teal-600 p-1 text-white rounded-md">Buy Name </button>
+        <div class="shadow-xl p-5 ">
+            <div class=" bg-gray-200 py-5 mb-5">
+                <img class=" mx-auto  " width="300px" height="300px" src=" https://covers.openlibrary.org/b/id/${info.cover_i ? info.cover_i:'' }-M.jpg "alt="Not available">
+            </div>
+            <h1 class=" text-1xl font-bold ">Title Name:${info.title}</h1>
+            <h1 class=" text-1xl mt-1">Author Name:${info.author_name[0]}</h1>
+            <h1 class=" text-1xl mt-1">Publisher:${info.publisher[0]}</h1>
+            <h1 class=" text-1xl mt-1">Publish date:${info.publish_date[0]}</h1>
+            
+    
+    
+            <div class="flex justify-between mt-3">
+                <h1 class=" text-1xl">Price</h1>
+                <button class="bg-teal-600 p-1 text-white rounded-md text-1xl">Buy Name </button>
+            </div>
         </div>
-    </div>
         `
         displaybook.appendChild(div)
         }
 
-        else{
-            console.log("Sorry")
-        }
+       
       
         
     })
